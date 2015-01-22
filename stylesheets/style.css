@@ -1,0 +1,150 @@
+/* Base ----------------------------*/
+body, div, p, a, img, i, span, h1, h2, h3, h4, h5 {
+	box-sizing: border-box;
+}
+img {
+	vertical-align: bottom;
+}
+html {
+	height: 100%;
+	background-color: #222222;
+	font-family: 'Muli', sans-serif;
+}
+body {
+	position: relative;
+	min-height: 100%;
+	background-color: inherit;
+	padding-bottom: 60px;
+}
+
+/* Background ----------------------*/
+.scrolling-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	background-image: url("/images/skyline.svg");
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	background-position: 0 bottom;
+
+	-webkit-transform: translateZ(0);
+}
+
+/* Typography ----------------------*/
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+	color: #ffffff;
+}
+h1, h2 {
+	font-family: 'Oswald', sans-serif;
+}
+h2, h3, h4, h5, h6 {
+	font-family: 'Muli', sans-serif;
+}
+
+/* Title ---------------------------*/
+.title-wrap {
+	padding-bottom: 50px;
+}
+.title {
+	
+}
+.subtitle {
+	color: #ff8d00;
+}
+
+/* Headshots -----------------------*/
+.person-wrap {
+	position: relative;
+	padding: 80px;
+}
+.headshot-wrap {
+	position: relative;
+	width: calc(100% - 10px);
+	margin: 5px;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 1;
+
+	-webkit-transition: 500ms;
+    transition: 500ms;
+}
+.headshot {
+	width: 100%;
+}
+.aidan .headshot-wrap {
+	border: 5px solid #ff8d00;
+}
+.derek .headshot-wrap {
+	border: 5px solid #39d084;
+}
+.headshot-name-wrap {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.85);
+}
+.headshot-name {
+	margin: 0;
+	top: 50%;
+	width: 100%;
+	position: absolute;
+	transform: translate(0,-50%);
+	-webkit-transform: translate(0, -50%);
+	padding: 5px;
+}
+.hover .headshot-wrap {
+	margin: 0;
+	width: 100%;
+	border-width: 10px;
+}
+.hover div.headshot-name-wrap {
+	visibility: visible;
+	z-index: 99;
+	-webkit-transition: 500ms;
+    transition: 500ms;
+}
+
+/* Icons ---------------------------*/
+.icon-group {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	width: 100%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%, -50%);
+	z-index: 0;
+}
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%, -50%);
+	transition: 300ms;
+}
+.icon img {
+	width: 60px;
+}
+.open .icon {
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+}
+
+/* Footer ---------------------------*/
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.footer-item-wrap {
+	width: 100%;
+	text-align: center;
+}
